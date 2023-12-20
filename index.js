@@ -13,12 +13,13 @@ app.use(cors({
 app.use(express.json())
 const port = process.env.PORT || 5000
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: '',
-    database: 'accredian_task'
+    host: "sql12.freesqldatabase.com",
+    user: "sql12671848",
+    password: 'usmkTbimYh',
+    database: 'sql12671848'
 })
 app.get('/', (req, res) => {
+
     res.send('Hello World!')
 })
 
