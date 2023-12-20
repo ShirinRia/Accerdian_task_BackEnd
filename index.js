@@ -64,18 +64,7 @@ app.get('/users/:email/:password', async (req, res) => {
     });
 
 })
-//   get all user
-app.get('/users', async (req, res) => {
 
-    var sql = "SELECT * FROM users";
-
-    db.query(sql, (err, data) => {
-        if (err) return res.json(err);
-
-        return res.json(data);
-    });
-    res.send(data)
-})
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
 })
