@@ -3,7 +3,7 @@ const express = require('express')
 var cors = require('cors')
 var app = express()
 app.use(cors({
-        origin: ['http://localhost:5173'],
+        origin: ['http://localhost:5173','https://polite-cupcake-e11ff5.netlify.app'],
         credentials: true
 
     }
@@ -13,10 +13,10 @@ app.use(cors({
 app.use(express.json())
 const port = process.env.PORT || 5000
 const db = mysql.createConnection({
-    host: "sql12.freesqldatabase.com",
-    user: "sql12671848",
-    password: 'usmkTbimYh',
-    database: 'sql12671848'
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
 })
 app.get('/', (req, res) => {
 
